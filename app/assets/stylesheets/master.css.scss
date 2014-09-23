@@ -24,6 +24,17 @@ h1, h2, h3, h4, h5, h6{
 a{
 	color: #529f35;
 }
+
+.btn, .btn-primary-custom{
+	background: #529f35;
+	font-family: Oswald, sans-serif;
+	font-size: .75 em;
+	letter-spacing: .07em;
+	color: #fff;
+	border: 0;
+	margin: 1em;
+	
+}
 // .nav, .navbar, .navbar-inverse, .navbar-collapse, .navbar-nav, .navbar-right {
 // background: #237f8f, url(assets/feet.png);
 // border:  #237f8f;
