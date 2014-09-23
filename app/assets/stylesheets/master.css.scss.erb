@@ -12,7 +12,7 @@ body{
 	font-size: 100%;
 	font-family: Merriweather, serif;
 	font-weight: 400;
-	background-image: url(<%= asset_path('sunny.png') %>);
+	background-image: url('sunny.png');
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -28,12 +28,13 @@ a{
 // background: #237f8f, url(feet.png);
 // border:  #237f8f;
 // }
-// erb per https://devcenter.heroku.com/articles/rails-4-asset-pipeline
+// erb for asset path per https://devcenter.heroku.com/articles/rails-4-asset-pipeline
 //after heroku push failed and 'Precompiling assets failed.'
+//background-image: url(<%= asset_path 'feet.png' %>); but no go
 
 .navbar-inverse, .navbar-nav{
 background: #529f35;
-background-image: url(<%= asset_path('feet.png') %>);
+background-image: url('feet.png');
 height: 60px;
 border: #529f35;
 }
@@ -42,14 +43,7 @@ border: #529f35;
 color: #fff;
 }
 
-// ul>.navbar-nav, .navbar-right {
-// color: #fff;	
-// background-color: #237f8f;
-// border-color: #96c1b8;
-// }
 
-//background: url(assets/something.png)
-//don't need to include 'images' in path
 
 
 .navbar-inverse .navbar-brand{
