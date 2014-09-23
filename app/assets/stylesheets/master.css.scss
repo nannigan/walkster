@@ -35,6 +35,11 @@ a{
 	margin: 1em;
 	
 }
+
+// .glyphicon, .glyphicon-plus-sign{
+// 	color: #fff;
+// 	display: inline-block;
+// }
 // .nav, .navbar, .navbar-inverse, .navbar-collapse, .navbar-nav, .navbar-right {
 // background: #237f8f, url(assets/feet.png);
 // border:  #237f8f;
@@ -65,6 +70,14 @@ color: #fff;
 	font-family: Oleo Script Swash Caps, serif;
 	font-size: 1.5em;
 	letter-spacing: .05em;
+	color: #fff;
+}
+
+.plus{
+	display: inline;
+	font-family: Oswald, sans-serif;
+	font-weight: 700;
+	font-size: 2em;
 	color: #fff;
 }
 
