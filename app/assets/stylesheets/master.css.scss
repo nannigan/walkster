@@ -12,21 +12,39 @@ body{
 	font-size: 100%;
 	font-family: Merriweather, serif;
 	font-weight: 400;
+	background-image: url('sunny.png');
 }
-
-
 
 h1, h2, h3, h4, h5, h6{
- color: #237f8f;
- font-family: Oswald sans-serif;
+ color: #529f35;
+ font-family: Oswald, sans-serif;
  font-weight: 700;
+ letter-spacing: .07em;
+}
+a{
+	color: #529f35;
+}
+// .nav, .navbar, .navbar-inverse, .navbar-collapse, .navbar-nav, .navbar-right {
+// background: #237f8f, url(assets/feet.png);
+// border:  #237f8f;
+// }
+
+.navbar-inverse, .navbar-nav{
+background: #529f35;
+background-image: url('feet.png');
+height: 60px;
+border: #529f35;
 }
 
-nav.navbar.navbar-inverse {
-color: #fff;	
-background-color: #237f8f;
-border-color: #96c1b8;
+.navbar-inverse .navbar-nav > li > a {
+color: #fff;
 }
+
+// ul>.navbar-nav, .navbar-right {
+// color: #fff;	
+// background-color: #237f8f;
+// border-color: #96c1b8;
+// }
 
 //background: url(assets/something.png)
 //don't need to include 'images' in path
@@ -38,13 +56,18 @@ border-color: #96c1b8;
 	letter-spacing: .05em;
 	color: #fff;
 }
-// .navbar, .navbar-inverse{
-// color: #fff;
-// border-radius: none;
-// background-color: #237f8f;
-// border-color: #96c1b8;
-// }
 
+.pagination{
+	display: block;
+	padding: 8px;
+	text-align: center;
+	border: 1px dotted #237f8f;
+	border-left: 0;
+	border-right: 0;
+	width: 20%;
+	overflow: visible;
+	margin: 0 auto;
+}
 
 .walk-box{
 

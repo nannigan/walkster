@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
 	def index
 		@places = Place.all
-		@placess = Place.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 5)
+		@places = Place.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 4)
 	end
 end
