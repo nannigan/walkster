@@ -1,0 +1,59 @@
+* {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+html{
+	font-size: 16px;
+	border-radius: 0;
+}
+
+body{
+	font-size: 100%;
+	font-family: Merriweather, serif;
+	font-weight: 400;
+}
+
+
+
+h1, h2, h3, h4, h5, h6{
+ color: #237f8f;
+ font-family: Oswald sans-serif;
+ font-weight: 700;
+}
+
+nav.navbar.navbar-inverse {
+color: #fff;	
+background-color: #237f8f;
+border-color: #96c1b8;
+}
+
+//background: url(assets/something.png)
+//don't need to include 'images' in path
+
+
+.navbar-inverse .navbar-brand{
+	font-family: Oleo Script Swash Caps, serif;
+	font-size: 1.5em;
+	letter-spacing: .05em;
+	color: #fff;
+}
+// .navbar, .navbar-inverse{
+// color: #fff;
+// border-radius: none;
+// background-color: #237f8f;
+// border-color: #96c1b8;
+// }
+
+
+.walk-box{
+
+	 -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-bottom: .75em;
+ 
+}

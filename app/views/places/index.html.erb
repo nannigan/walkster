@@ -1,9 +1,9 @@
+<%= will_paginate @places %>
 <% @places.each do |place| %>
-  <div>
-    <h1><%= place.name %></h1><br />
+  <div class='col-xs-10 col-xs-offset-1 walk-box'>
+    <h1><%= place.name %></h1>
     <i><%= place.address %></i><br />
-    <p><%= place.description %></p><br />
+    <p><%= place.description %></p>
   </div>
 
-  <hr />
 <% end %>
