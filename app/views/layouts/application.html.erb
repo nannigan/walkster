@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'Bay Walkster', root_path, :class => 'navbar-brand' %>
+      <%= link_to " Bay Walkin'", root_path, :class => 'navbar-brand' %>
        
     </div>
 
@@ -38,22 +38,30 @@
 <!-- <span class='glyphicon glyphicon-plus-sign'></span> -->
         <li><%= link_to new_place_path do %>
           <span class='glyphicon glyphicon-plus-sign'></span>
-          Add New Walk
+          Add New Walk&nbsp;&nbsp;&nbsp;&nbsp;
           <%end%></li>
-       <!--  <span class=plus >+</span>Add New Walk -->
-        <li><a href="#">Link</a></li>
+ <% if user_signed_in? %>
+        <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+      <% end %>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <!-- authentication error display -->
-  <% if notice.present %>
-  <p class="alert alert-info"><%= notice %></p>
+DEVISE is adding two paras at top o page of html
+  <% if notice.present? %>
+  <span class="alert alert-info"><%= notice %></span>
   <% end  %>
 
-  <% if alert.present %>
-  <p class="alert alert-danger"><%= alert %></p>
+  <% if alert.present? %>
+  <span class="alert alert-danger"><%= alert %></span>
   <% end  %>
+
+
 <%= yield %>
 
 </body>
