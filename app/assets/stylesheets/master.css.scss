@@ -17,6 +17,7 @@ p{
 html{
 	font-size: 16px;
 	border-radius: 0;
+		
 }
 
 body{
@@ -25,6 +26,7 @@ body{
 	font-weight: 400;
 	background-image: url('dots.png');
 	position: relative;
+
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -34,8 +36,13 @@ h1, h2, h3, h4, h5, h6{
  letter-spacing: .07em;
 }
 a{
-	color: #529f35;
+	color: #09a3c1;
 }
+
+// .alert, .notice{
+// 	position: absolute;
+// 	height: 80px;
+// }
 
 .btn, .btn-primary-custom{
 	background: #529f35;
@@ -111,6 +118,7 @@ color: #fff;
 	width: 20%;
 	overflow: visible;
 	margin: 0 auto;
+	margin-top: 40px;
 }
 
 .walk-box{

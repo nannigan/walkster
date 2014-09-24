@@ -1,4 +1,7 @@
 class PlacesController < ApplicationController
+	  before_action :authenticate_user!, :only => [:new, :create]
+	  #devise filter
+
 	def index
 		@places = Place.all
 		@places = Place.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 4)
@@ -9,7 +12,9 @@ class PlacesController < ApplicationController
 	end
 
 	def create
-		Place.create(place_params)
+		# Place.create(place_params)
+		# from devise we know current_user
+		current_user.places.create(place_params)
 		redirect_to root_path
 		# can see in rake routes that #index is root
 	end
