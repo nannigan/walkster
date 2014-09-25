@@ -1,14 +1,13 @@
 
 
   <div class='col-xs-10 col-xs-offset-1 walk-box'>
-
-
-
     <h1><%= @place.name %></h1>
     <i><%= @place.address %></i><br />
     <p><%= @place.description %></p>
         <% if @place.user.present? %>
       <small><%= @place.user.email %></small>
     <% end %>
+    <button class='btn btn-primary-custom'><%= link_to 'Edit', edit_place_path(@place) %></button>
+     <button class='btn btn-primary-custom pull-right'><%= link_to 'Delete this place', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'} %></button>
   </div>
 
