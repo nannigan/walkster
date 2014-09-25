@@ -1,0 +1,14 @@
+
+
+  <div class='col-xs-10 col-xs-offset-1 walk-box'>
+
+
+
+    <h1><%= @place.name %></h1>
+    <i><%= @place.address %></i><br />
+    <p><%= @place.description %></p>
+        <% if @place.user.present? %>
+      <small><%= @place.user.email %></small>
+    <% end %>
+  </div>
+

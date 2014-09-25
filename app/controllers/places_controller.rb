@@ -11,6 +11,10 @@ class PlacesController < ApplicationController
 		@place = Place.new
 	end
 
+	def show
+		@place = Place.find(params[:id])
+	end
+
 	def create
 		# Place.create(place_params)
 		# from devise we know current_user
