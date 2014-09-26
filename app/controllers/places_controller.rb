@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
-	  before_action :authenticate_user!, :only => [:new, :create]
+	  before_action :authenticate_user!, :only => [:new, :create, :edit, :update]
+	  # user not authenticated won't see edit button see edit.html.erb
 	  #devise filter
 
 	def index
@@ -25,11 +26,20 @@ class PlacesController < ApplicationController
 
 	def edit
 		@place = Place.find(params[:id])
+		if @place.user != current_user
+			    return render :text => 'No NO Not Allowed', :status => :forbidden
+		end
 	end
+
+
+
 
 # this happens on the edit page submit button courtesy of simple_form
 def update
 	@place = Place.find(params[:id])
+	if @place.user != current_user
+			    return render :text => 'No NO Not Allowed', :status => :forbidden
+       end
 	@place.update_attributes(place_params)
 	redirect_to root_path
 end

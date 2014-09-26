@@ -7,7 +7,9 @@
         <% if @place.user.present? %>
       <small><%= @place.user.email %></small>
     <% end %>
+     <p><% if current_user && current_user == @place.user %></p>
     <button class='btn btn-primary-custom'><%= link_to 'Edit', edit_place_path(@place) %></button>
-     <button class='btn btn-primary-custom pull-right'><%= link_to 'Delete this place', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'} %></button>
+    <% end %>
+    
   </div>
 

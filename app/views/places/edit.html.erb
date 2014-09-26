@@ -10,7 +10,10 @@
     <p><%= f.input :address %></p>
     <p><%= f.input :description %></p>
     <button class='btn btn-primary-custom pull-right'><%= link_to "Cancel", root_path %></button>
-    <%= f.submit 'Edit', :class => 'btn btn-primary-custom' %> 
+   
+    <!-- if user is logged in and if user is attached to this place -->
+    <%= f.submit 'Edit this place', :class => 'btn btn-primary-custom' %> 
+<button class='btn btn-primary-custom pull-right'><%= link_to 'Delete this place', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'} %></button>
   <% end %>
   </div>
 
