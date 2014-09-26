@@ -15,9 +15,12 @@ class PlacesController < ApplicationController
 	def create
 		# Place.create(place_params)
 		# from devise we know current_user
-		current_user.places.create(place_params)
-		redirect_to root_path
-		# can see in rake routes that #index is root
+		@place = current_user.places.create(place_params)
+		if @place.valid?
+	    redirect_to root_path
+			else
+	    render :new, :status => :unprocessable_entity
+		end
 	end
 
 	def show
@@ -27,7 +30,7 @@ class PlacesController < ApplicationController
 	def edit
 		@place = Place.find(params[:id])
 		if @place.user != current_user
-			    return render :text => 'No NO Not Allowed', :status => :forbidden
+			    return render :text => 'NO NO Not Allowed', :status => :forbidden
 		end
 	end
 
@@ -39,9 +42,13 @@ def update
 	@place = Place.find(params[:id])
 	if @place.user != current_user
 			    return render :text => 'No NO Not Allowed', :status => :forbidden
-       end
+	end
 	@place.update_attributes(place_params)
-	redirect_to root_path
+			if @place.valid?
+	    redirect_to root_path
+			else
+	    render :new, :status => :unprocessable_entity
+			end
 end
 
 def destroy
@@ -52,7 +59,7 @@ end
 
 
 
-	private
+private
 
 	def place_params
 		params.require(:place).permit(:name, :description, :address)
