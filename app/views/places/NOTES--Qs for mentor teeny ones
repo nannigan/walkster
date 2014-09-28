@@ -1,0 +1,4 @@
+var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitude %>); 
+
+Q is does the google.maps.LtLng function require floating point integers?
+doesn't <%= %> 'return' a string into the code it is inserted into?
