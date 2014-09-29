@@ -31,12 +31,23 @@
     <% end %>
 
       <div class='comment-form'>
-        <%= simple_form_for @comment, :url => 'place_comments_path(@place)' do |f| %>
+        <%= simple_form_for @comment, :url => place_comments_path(@place) do |f| %>
         <%= f.input :message %>
         <%= f.input :rating %>
         <%= f.submit "Add a Comment", :class => 'btn btn-primary-custom' %>
       <% end %>
     </div>
+    <h2>Comments</h2>
+
+<% @place.comments.each do |comment| %>
+ 
+    <blockquote>
+      <em><%= comment.rating %></em> -
+        <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+
+<% end %>
     
   </div>
 
