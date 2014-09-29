@@ -1,6 +1,8 @@
 class Place < ActiveRecord::Base
 
 belongs_to :user
+has_many :comments
+
 geocoded_by :address #because we already have address col in table?
 after_validation :geocode
 
