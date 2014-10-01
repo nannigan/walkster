@@ -1,23 +1,36 @@
 <%= will_paginate @places, :class => 'pagination'%>
 <% @places.each do |place| %>
   <div class='col-xs-10 col-xs-offset-1 walk-box'>
+  <div class='place-info'>  
     <h1><%= link_to place.name, place_path(place) %></h1>
-    <i><%= place.address %></i><br />
-    <p><%= place.description %></p>
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
+      <i><%= place.address %></i><br />
+      <p><%= place.description %></p>
+      <% if place.user.present? %>
+        <small><%= place.user.email %></small>
+      <% end %>
+    </div>
     <% if place.comments.present? %>
 	<div class="col-xs-12">
     <blockquote>
       <% if place.comments.last.humanized_rating.present? %>
         <b><%= place.comments.last.humanized_rating %></b> -
-      <% end %>
+      <% end %><br>
       <%= place.comments.last.message %>
       <small><%= place.comments.last.user.email %></small>
     </blockquote>
-  </div>
+
 		<% end %>
+
+  <% if place.photos.present? %>
+ <div class="show-image">
+    <%= image_tag place.photos.last.picture, :class=> 'photo' %>
+    <br>
+        <%= place.photos.last.caption %>
+
+  </div>
+    <% end %>
+  </div>
+
 
   </div>
 
