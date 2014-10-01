@@ -3,6 +3,7 @@
 //#208275 boot green
 //#09a3c1 boot turq
 //#667c1a dk green
+//#51777c dusty blue
 
 * {
 
@@ -54,6 +55,10 @@ a{
 	font-family: PT Mono, serif;
 	font-weight: 400;
 	letter-spacing: .07em;
+}
+
+a:hover{
+	color: #51777c;
 }
 
 // .alert, .notice{
@@ -139,7 +144,7 @@ img{
 .navbar-inverse{
 	  border-radius: 0 !important;
   -moz-border-radius: 0 !important;
-background: #667c1a;
+background: #51777c;
 background-image: url('bootss.png');
 background-repeat: repeat-x;
 padding: 60px 0 8px 16px;
@@ -167,12 +172,25 @@ color: #fff;
 //don't need to include 'images' in path
 //
 
+
 .navbar-inverse .navbar-brand{
 	font-family: Oleo Script Swash Caps, serif;
 	font-size: 2em;
 	letter-spacing: .05em;
 	color: #fff;
 margin-left:20px;
+}
+
+.navbar-inverse .navbar-toggle {
+border-color: #fff;
+}
+
+
+.navbar-collapse .collapse .in{
+	background-color: #09a3c1;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: #09a3c1;
 }
 
 .plus{
@@ -245,7 +263,7 @@ color: #aaaaaa;
 	  //border-right: 6px solid #667c1a;
   margin: 1.5em 0;
   padding: 0.5em 1em;
-	background: #667c1a;
+	background: #51777c;
 	color: #fff;
 	text-align: center;
 }
@@ -261,10 +279,10 @@ color: #aaaaaa;
 	 -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
+  background: #fdfbee;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-bottom: .75em;
-  padding: 28px;
+  margin-bottom: 0.75em;
+  //padding: 28px;
  
 }
