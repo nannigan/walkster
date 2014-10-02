@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
   has_many :photos
   #setting up assoc between places and users tables
 
-  mount_uploader :picture, PictureUploader
+  # mount_uploader :picture, PictureUploader
 end

@@ -5,8 +5,8 @@
       <h1><%= @place.name %></h1>
       <i><%= @place.address %></i><br />
       <p><%= @place.description %></p>
-    </div>
-  
+    </div> <!-- place info -->
+
 
 <% if @place.latitude.present? && @place.longitude.present? %> 
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
@@ -15,12 +15,18 @@
           var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitude %>); 
           var mapOptions = { 
             zoom: 12, 
-            center: myLatlng 
+            center: myLatlng ,
+            //  panControl: false,
+            zoomControl: true,
+            // mapTypeControl: true,
+            scaleControl: true,
+            streetViewControl: true
+            // overviewMapControl: true,
           }; 
           var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); 
-
-          var marker = new google.maps.Marker({ position: myLatlng, map: map }); 
-        } 
+          var image = '<%= image_path("boot-marker.png")%>';
+          var marker = new google.maps.Marker({ position: myLatlng, map: map, icon: image}); 
+        } //end initialize
         google.maps.event.addDomListener(window, 'load', initialize);
         </script>
     <div id='map-canvas'></div>
@@ -113,9 +119,9 @@
         <%= photo.caption %>
      
 
-  </div>
+  </div> <!-- image -->
   <% end %> 
-   </div>  
-  </div>
+   </div>  <!-- 12 and six -->
+  </div> <!-- outer container show box -->
 
 

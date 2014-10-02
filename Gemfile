@@ -50,6 +50,9 @@ gem 'figaro', '>= 1.0.0'
 
 # for photo upload with rails app
 gem 'carrierwave'
+# for carierwave to communicate with AWS
+gem 'fog'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
