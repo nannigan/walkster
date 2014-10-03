@@ -4,6 +4,7 @@
 //#09a3c1 boot turq
 //#667c1a dk green
 //#51777c dusty blue
+//rgb(9, 163, 193) boot turq
 
 * {
 
@@ -119,6 +120,30 @@ img{
 	margin-left: 0;
 
 }
+#carousel-example-generic{
+
+	margin-top: 84px;
+	
+}
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(9, 163,193, 0.6) 0%, rgba(9, 163,193, 0.0001) 100%);
+  background-image: linear-gradient(to right, rgba(9, 163,193, 0.6) 0%, rgba(9, 163,193, 0.0001) 100%);
+  background-repeat: repeat-x;
+  
+}
+/* line 87, /home/vagrant/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_carousel.scss */
+.carousel-control.right {
+  left: auto;
+  right: 0;
+  background-image: -webkit-linear-gradient(left, rgba(9, 163,193, .0001) 0%, rgba(9, 163,193, 0.6) 100%);
+  background-image: linear-gradient(to right, rgba(9, 163,193, .0001) 0%, rgba(9, 163,193, 0.6) 100%);
+  background-repeat: repeat-x;
+
+}
+
+
+.carousel-inner > .item > img { margin: 0 auto; }
 
 
 .devise-form{
