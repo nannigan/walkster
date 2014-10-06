@@ -7,6 +7,9 @@ class CommentsController < ApplicationController
 		 #place at this place id
 	end
 
+	# def destroy
+	# end
+
 	 private
 
   def comment_params

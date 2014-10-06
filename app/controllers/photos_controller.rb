@@ -8,6 +8,18 @@ class PhotosController < ApplicationController
 		 #place at this place id
 	end
 
+# 	def destroy
+# 	@place = Place.find(params[:id])
+# 	@photo.destroy
+# 	redirect_to place_path(@place)
+# end
+
+# 	def destroy
+# @place = Place.find(params[:place_id])
+# 		 @place.photos.destroy(photo_params)
+# 	redirect_to place_path(@place)
+# 	end
+
 	 private
 
   def photo_params
