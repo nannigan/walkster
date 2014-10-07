@@ -2,10 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 blockquote{
-  color: #fdfbee;
-  background: #4655b5;
+  // color: #fdfbee;
+  // background: #4655b5;
   // border-left: 10px solid #ccc;
   border-left: none;
+  border-top: 3px solid #4655b5;
+  border-bottom: 3px solid #4655b5;
   //border-right: 6px solid #667c1a;
  margin: 1.5em 0;
   padding: 0.25em 1em 0.5em 1em;
@@ -16,7 +18,7 @@ blockquote{
  //opacity: .33;
 }
 blockquote small{
-  color: #fdfbee;
+  //color: #fdfbee;
 }
 blockquote:before {
   color: #09a3c1;
@@ -30,7 +32,7 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
-  color: #fdfbee;
+  //color: #fdfbee;
 }
 blockquote footer:before, blockquote small:before, blockquote .small:before {
 content: '\00A0 \00A0 \2014 \00A0';

@@ -18,8 +18,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+   
+  <p class="alert alert-info"> <% if notice.present? %><%= notice %>  <% end  %></p>
+
+
+
+  <p class="alert alert-danger">  <% if alert.present? %><%= alert %>  <% end  %></p>
+
+ 
 
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
@@ -31,7 +37,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to " Bay Walkin'", root_path, :class => 'navbar-brand' %>
+      <span class='tagline visible-lg visible-md'>sharing favorite local walks</span>
+      <%= link_to " Pedster", root_path, :class => 'navbar-brand' %>
        
     </div>
 
@@ -56,14 +63,8 @@
   </div><!-- /.container-fluid -->
 </nav>
 <!-- authentication error display -->
-<!-- DEVISE is adding two paras at top o page of html -->
-  <% if notice.present? %>
-  <span class="alert alert-info"><%= notice %></span>
-  <% end  %>
 
-  <% if alert.present? %>
-  <span class="alert alert-danger"><%= alert %></span>
-  <% end  %>
+
 
 
 <%= yield %>

@@ -6,4 +6,39 @@
 <p><%= @user.comments.count %> total comments</p>
 <p><%= @user.comments.where(:rating => '5_stars').count %> total 5 star reviews</p></div>
 
+
+    <% @user.comments.each do |comment| %>
+<div class='col-xs-12 col-sm-6'>
+	<h2><%= link_to comment.place.name, place_path(comment.place) %></h2>
+  <blockquote>
+      <% if comment.humanized_rating.present? %>
+        <em><%= comment.humanized_rating %></em> -
+      <% end %><br>
+        <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+ 
+  <% end %>  
+<div class='col-xs-12'>
+  <h2>My Places</h2>
+<% @user.places.each do |place| %> 
+  
+    <h1><%= link_to place.name, place_path(place) %></h1>
+      <i><%= place.address %></i><br />
+      <p><%= place.description %></p>
+      <% if place.user.present? %>
+        <small><%= place.user.email %></small>
+      <% end %>
+    
+    <% if place.comments.present? %>
+
+    <blockquote>
+      <% if place.comments.last.humanized_rating.present? %>
+        <b><%= place.comments.last.humanized_rating %></b> -
+      <% end %><br>
+      <%= place.comments.last.message %>
+      <small><%= place.comments.last.user.email %></small>
+    </blockquote>
 </div>
+<% end %>
+<% end %>
