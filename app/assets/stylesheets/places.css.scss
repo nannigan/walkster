@@ -1,9 +1,22 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#map-canvas { 
+
+// http://stackoverflow.com/questions/8879544/google-maps-zoom-control
+/* Bootstrap Css Map Fix rename id map-google whichdoesn't conflict with a bootstrap map
+style*/
+#map-google { 
 	display: block;
 	height: 300px; 
 	margin-top: 2em;
-
 } 
+
+// #map-container #map-google img {
+#map-google img {
+  max-width: none;
+}
+
+// #map-container #map-google label {
+ #map-google label {
+  width: auto; display:inline;
+}
